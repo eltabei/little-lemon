@@ -1,1 +1,1 @@
-Coursera's Front-End Developer Capstone courser project
+Coursera's Front-End Developer Capstone project

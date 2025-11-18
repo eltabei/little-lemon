@@ -12,16 +12,31 @@ code {
     monospace;
 }
 
-/* nav li {
-  display: inline-block;
-  margin-right: 20px;
-} */
-
-nav ul {
+header {
   display: flex;
-  gap: 20px;        /* spacing between items */
-  padding: 0;
-  margin: 0;
-  margin-top: 20px;
-  list-style: none;
+  /* vertically centers items */
+  align-items: center;
+  /* center horizontally */
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.Logo {
+  margin-right: 30px;
+}
+
+nav {
+  /* make nav links horizontal */
+  display: flex;
+  /* align-items: left; */
+  /* text-align: center; */
+  gap: 20px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background-color: green;
 }

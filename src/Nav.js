@@ -1,19 +1,24 @@
-import Logo from './Logo.svg'
+import { Routes, Route, Link } from "react-router-dom";
 
 function Nav() {
   return (
     <>
       <nav>
-        <ul>
-          <li><img src={Logo} alt="Little Lemon Logo"></img></li>
-          <li><a href="/home" role="button">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/menu">Menu</a></li>
-          <li><a href="/reservations">Reservations</a></li>
-          <li><a href="/order-online">Order Online</a></li>
-          <li><a href="/login">Login</a></li>
-        </ul>
+        <Link to="/" className="nav-item">Home</Link>
+        <Link to="/about" className="nav-item">About</Link>
+        <Link to="/menu" className="nav-item">Menu</Link>
+        <Link to="/reservations" className="nav-item">Reservations</Link>
+        <Link to="/order-online" className="nav-item">Order Online</Link>
+        <Link to="/login" className="nav-item">Login</Link>
       </nav>
+      <Routes>
+        <Route path="/home" />
+        <Route path="/about" />
+        <Route path="/menu" />
+        <Route path="/reservations" />
+        <Route path="/order-online" />
+        <Route path="/login" />
+      </Routes>
     </>
   );
 }
