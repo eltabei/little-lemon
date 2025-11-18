@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-header {
+header, footer {
   display: flex;
   /* vertically centers items */
   align-items: center;
@@ -33,10 +33,32 @@ nav {
   gap: 20px;
 }
 
-.hero {
+.hero, .specials, .testimonials, .special, .chicago, .reservations {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
+}
+
+.hero {
   background-color: green;
+}
+
+.reservations, .reserveInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.reservationImages {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 30px;
+}
+
+.reserveForm {
+  display: grid;
+  max-width: 200px;
+  gap: 20px;
 }
