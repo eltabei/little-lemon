@@ -1,13 +1,14 @@
 import Logo from './Logo.svg'
 import Nav from './Nav';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <>
       <header>
-        <a href="/home">
+        <Link to="/home">
           <img src={Logo} className="Logo" alt="Little Lemon Logo"></img>
-        </a>
+        </Link>
         <Nav />
       </header>
     </>
