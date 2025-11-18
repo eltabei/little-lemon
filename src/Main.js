@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import RestFood from './restauranfood.jpg';
+import RestFood from './restaurantfood.jpg';
 
 function Main() {
   const navigate = useNavigate();

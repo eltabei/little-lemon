@@ -6,6 +6,8 @@ function BookingForm() {
   const [noOfGuests, setNoOfGuests] = useState("1");
   const [occasion, setOccasion] = useState("");
 
+  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
+
   return (
       <>
         <form className="reserveForm" >
@@ -13,12 +15,7 @@ function BookingForm() {
           <input type="date" id="res-date" value={reservationDate} onChange={e => setReservationDate(e.target.value)} />
           <label for="res-time">Choose time</label>
           <select id="res-time" value={reservationTime} onChange={e => setReservationTime(e.target.value)}>
-            <option>17:00</option>
-            <option>18:00</option>
-            <option>19:00</option>
-            <option>20:00</option>
-            <option>21:00</option>
-            <option>22:00</option>
+            {availableTimes.map(t => <option>{t}</option>)}
           </select>
         <label for="guests">Number of guests</label>
         <input type="number" value={noOfGuests} placeholder="1" min="1" max="10" id="guests" onChange={e => setNoOfGuests(e.target.value)} />
@@ -28,7 +25,7 @@ function BookingForm() {
           <option>Birthday</option>
           <option>Anniversary</option>
         </select>
-        <input type="submit" value="Let's go" />
+        <input type="submit" value="Make your reservation" />
       </form>
 
       {/* <label>{reservationDate}</label>
