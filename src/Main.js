@@ -1,10 +1,10 @@
-import { useState, Link } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RestFood from './restaurantfood.jpg';
 // import Reservations from './Reservations';
 
 function Main() {
-  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
+  const navigate = useNavigate();
+
   const dishes = [
     {
       image: "",
@@ -28,8 +28,6 @@ function Main() {
     }
   ]
 
-  const navigate = useNavigate();
-
   return (
     <>
       <main>
@@ -38,7 +36,8 @@ function Main() {
             <h1>Little Lemon</h1>
             <h3>Chicago</h3>
             <p>Welcome to Little Lemon Website.</p>
-            <button onClick={() => navigate("/reservations", { state: { availableTimes: availableTimes }})}>Reserve a Table</button>
+            {/* <button onClick={() => navigate("/reservations", { state: { availableTimes: availableTimes, dispatch: dispatch }})}>Reserve a Table</button> */}
+            <button onClick={() => navigate("/reservations")}>Reserve a Table</button>
             {/* <Link className="reserveATable" to="/reservations" state={{ availableTimes: availableTimes }}>Reserve a Table</Link> */}
             {/* <Link className="reserveATable" to="/reservations" state={{ availableTimes }}>Reserve a Table</Link> */}
           </section>
