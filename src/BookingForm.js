@@ -1,12 +1,10 @@
 import { useState } from "react";
 
-function BookingForm() {
+function BookingForm({ availableTimes }) {
   const [reservationDate, setReservationDate] = useState("");
   const [reservationTime, setReservationTime] = useState("");
   const [noOfGuests, setNoOfGuests] = useState("1");
   const [occasion, setOccasion] = useState("");
-
-  const [availableTimes, setAvailableTimes] = useState(["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"]);
 
   return (
       <>
