@@ -7,11 +7,11 @@ function Booking({ availableTimes, dispatch, submitForm }) {
   // const { availableTimes, dispatch } = location.state || {};
 
   return (
-    <section className="reservations">
+    <section className="booking">
       <h1>Little Lemon</h1>
       <h2>Chicago</h2>
-      <h2>Find a table for any occasion</h2>
-      <section className="reservationImages">
+      <h3>Find a table for any occasion</h3>
+      <section className="bookingImages">
         <img src={restaurant} width="20%" alt="Restaurant" ></img>
         <img src={chef} width="20%" alt="Restaurant Chef"></img>
       </section>

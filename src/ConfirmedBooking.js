@@ -6,8 +6,8 @@ function ConfirmedBooking() {
 
   return (
     <>
-      <section className="confirm">
-        <h1>Confirmed Booking</h1>
+      <section className="confirmedBooking">
+        <h2>Booking Confirmed</h2>
         <p>Date: {reservationDate}</p>
         <p>Time: {reservationTime}</p>
         <p>No. of Guests: {noOfGuests}</p>

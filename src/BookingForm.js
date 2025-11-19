@@ -35,7 +35,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
 
   return (
       <>
-      <form className="reserveForm" ref={formRef} onSubmit={handleSubmit} >
+      <form className="bookingForm" ref={formRef} onSubmit={handleSubmit} >
           <label for="res-date">Choose date</label>
           <input type="date" id="res-date" min={today} name="reservationDate" required value={formData.reservationDate} onChange={e => {
             handleChange(e);
@@ -52,7 +52,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
           <option></option>
           {occasions.map(o => (<option key={o} value={o}>{o}</option>))}
         </select>
-        <input type="submit" value="Make your reservation" disabled={!isFormValid} />
+        <input className="submitBtn" type="submit" value="Make your reservation" disabled={!isFormValid} />
       </form>
     </>
   );
