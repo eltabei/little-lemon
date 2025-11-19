@@ -39,7 +39,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/home" element={<Main /> } />
         <Route path="/about" />
         <Route path="/menu" />
         <Route path="/booking" element={<Booking availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
