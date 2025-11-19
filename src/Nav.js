@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import Booking from "./Booking";
 
-function Nav() {
+function Nav({ className }) {
   return (
     <>
-      <nav>
+      <nav className={className}>
         <Link to="/" className="nav-item">Home</Link>
         <Link to="/about" className="nav-item">About</Link>
         <Link to="/menu" className="nav-item">Menu</Link>

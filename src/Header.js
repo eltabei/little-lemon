@@ -9,7 +9,7 @@ function Header() {
         <Link to="/home">
           <img src={Logo} className="Logo" alt="Little Lemon Logo"></img>
         </Link>
-        <Nav />
+        <Nav className="headerNav" />
       </header>
     </>
   );
