@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import Reservations from "./Reservations";
+import Booking from "./Booking";
 import ConfirmedBooking from "./ConfirmedBooking";
 import { submitAPI } from './api.js';
 
@@ -15,7 +15,7 @@ function submitForm(formData) {
 test('Renders the BookingForm heading', () => {
   render(
     <MemoryRouter>
-      <Reservations availableTimes={["17:00", "18:00", "19:00"]} dispatch={mockDispatch} />
+      <Booking availableTimes={["17:00", "18:00", "19:00"]} dispatch={mockDispatch} />
     </MemoryRouter>);
   const headingElement = screen.getByText("Choose date");
   expect(headingElement).toBeInTheDocument();
@@ -23,9 +23,9 @@ test('Renders the BookingForm heading', () => {
 
 test('Can be submitted for valid Input', () => {
   render(
-    <MemoryRouter initialEntries={["/reservations"]}>
+    <MemoryRouter initialEntries={["/booking"]}>
       <Routes>
-        <Route path="/reservations" element={<Reservations availableTimes={["17:00", "18:00", "19:00"]} dispatch={mockDispatch} submitForm={submitForm} />} />
+        <Route path="/booking" element={<Booking availableTimes={["17:00", "18:00", "19:00"]} dispatch={mockDispatch} submitForm={submitForm} />} />
         <Route path="/confirm" element={<ConfirmedBooking />} />
       </Routes>
     </MemoryRouter>);
@@ -50,9 +50,9 @@ test('Can be submitted for valid Input', () => {
 
 test('Cannot be submitted for invalid/missing Input', () => {
   render(
-    <MemoryRouter initialEntries={["/reservations"]}>
+    <MemoryRouter initialEntries={["/booking"]}>
       <Routes>
-        <Route path="/reservations" element={<Reservations availableTimes={["17:00", "18:00", "19:00"]} dispatch={mockDispatch} submitForm={mockSubmitForm} />} />
+        <Route path="/booking" element={<Booking availableTimes={["17:00", "18:00", "19:00"]} dispatch={mockDispatch} submitForm={mockSubmitForm} />} />
         <Route path="/confirm" element={<ConfirmedBooking />} />
       </Routes>
     </MemoryRouter>);
@@ -77,9 +77,9 @@ test('Cannot be submitted for invalid/missing Input', () => {
 // Testing form fields
 test('Form date', () => {
   render(
-    <MemoryRouter initialEntries={["/reservations"]}>
+    <MemoryRouter initialEntries={["/booking"]}>
       <Routes>
-        <Route path="/reservations" element={<Reservations availableTimes={mockTimes} dispatch={mockDispatch} />} />
+        <Route path="/booking" element={<Booking availableTimes={mockTimes} dispatch={mockDispatch} />} />
       </Routes>
     </MemoryRouter>);
   const dateField = screen.getByLabelText("Choose date");
@@ -89,9 +89,9 @@ test('Form date', () => {
 
 test('Form time', () => {
   render(
-    <MemoryRouter initialEntries={["/reservations"]}>
+    <MemoryRouter initialEntries={["/booking"]}>
       <Routes>
-        <Route path="/reservations" element={<Reservations availableTimes={mockTimes} dispatch={mockDispatch} />} />
+        <Route path="/booking" element={<Booking availableTimes={mockTimes} dispatch={mockDispatch} />} />
       </Routes>
     </MemoryRouter>);
   const timeSelect = screen.getByLabelText("Choose time");
@@ -101,9 +101,9 @@ test('Form time', () => {
 
 test('Form No. of guests', () => {
   render(
-    <MemoryRouter initialEntries={["/reservations"]}>
+    <MemoryRouter initialEntries={["/booking"]}>
       <Routes>
-        <Route path="/reservations" element={<Reservations availableTimes={mockTimes} dispatch={mockDispatch} />} />
+        <Route path="/booking" element={<Booking availableTimes={mockTimes} dispatch={mockDispatch} />} />
       </Routes>
     </MemoryRouter>);
   const noOfGuestsField = screen.getByLabelText("Number of guests");
@@ -113,9 +113,9 @@ test('Form No. of guests', () => {
 
 test('Form occasion', () => {
   render(
-    <MemoryRouter initialEntries={["/reservations"]}>
+    <MemoryRouter initialEntries={["/booking"]}>
       <Routes>
-        <Route path="/reservations" element={<Reservations availableTimes={mockTimes} dispatch={mockDispatch} />} />
+        <Route path="/booking" element={<Booking availableTimes={mockTimes} dispatch={mockDispatch} />} />
       </Routes>
     </MemoryRouter>);
   const occasionSelect = screen.getByLabelText("Occasion");

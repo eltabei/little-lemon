@@ -4,7 +4,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import { Routes, Route } from 'react-router-dom';
-import Reservations from './Reservations.js';
+import Booking from './Booking.js';
 import ConfirmedBooking from './ConfirmedBooking.js';
 import { fetchAPI, submitAPI } from './api.js';
 
@@ -42,7 +42,7 @@ function App() {
         <Route path="/home" element={<Main /> } />
         <Route path="/about" />
         <Route path="/menu" />
-        <Route path="/reservations" element={<Reservations availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
+        <Route path="/booking" element={<Booking availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
         <Route path="/order-online" />
         <Route path="/login" />
         <Route path="/confirm" element={<ConfirmedBooking />} />

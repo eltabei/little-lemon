@@ -2,7 +2,7 @@ import restaurant from "./restaurant.jpg";
 import chef from "./restaurant chef B.jpg";
 import BookingForm from "./BookingForm";
 
-function Reservations({ availableTimes, dispatch, submitForm }) {
+function Booking({ availableTimes, dispatch, submitForm }) {
   // const location = useLocation();
   // const { availableTimes, dispatch } = location.state || {};
 
@@ -21,4 +21,4 @@ function Reservations({ availableTimes, dispatch, submitForm }) {
   );
 }
 
-export default Reservations;
+export default Booking;

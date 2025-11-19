@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
 import RestFood from './restaurantfood.jpg';
-// import Reservations from './Reservations';
 
 function Main() {
   const navigate = useNavigate();
@@ -37,7 +36,7 @@ function Main() {
             <h3>Chicago</h3>
             <p>Welcome to Little Lemon Website.</p>
             {/* <button onClick={() => navigate("/reservations", { state: { availableTimes: availableTimes, dispatch: dispatch }})}>Reserve a Table</button> */}
-            <button onClick={() => navigate("/reservations")}>Reserve a Table</button>
+            <button onClick={() => navigate("/booking")}>Reserve a Table</button>
             {/* <Link className="reserveATable" to="/reservations" state={{ availableTimes: availableTimes }}>Reserve a Table</Link> */}
             {/* <Link className="reserveATable" to="/reservations" state={{ availableTimes }}>Reserve a Table</Link> */}
           </section>
