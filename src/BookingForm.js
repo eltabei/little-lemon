@@ -42,13 +42,13 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
             dispatch({ type: "reset", payload: formData.reservationTime, date: e.target.value });
           }} />
           <label for="res-time">Choose time</label>
-        <select id="res-time" required name="reservationTime" value={formData.reservationTime} onChange={handleChange}>
+          <select id="res-time" required name="reservationTime" value={formData.reservationTime} onChange={handleChange}>
             {availableTimes.map(t => <option key={t}>{t}</option>)}
           </select>
         <label for="guests">Number of guests</label>
         <input type="number" required value={formData.noOfGuests} name="noOfGuests" placeholder="1" min="1" max="10" id="guests" onChange={handleChange} />
         <label for="occasion">Occasion</label>
-        <select id="occasion" value={formData.occasion} name="occasion" onChange={handleChange}>
+        <select id="occasion" value={formData.occasion} aria-label="Dropdown" name="occasion" onChange={handleChange}>
           <option></option>
           {occasions.map(o => (<option key={o} value={o}>{o}</option>))}
         </select>
