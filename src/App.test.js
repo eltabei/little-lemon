@@ -12,18 +12,18 @@ test('renders Welcome', () => {
   expect(pElement).toBeInTheDocument();
 });
 
-const defaultTimes = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
-
 test('initializeTimes', () => {
-  expect(initializeTimes()).toEqual(defaultTimes);
+  expect(initializeTimes(new Date())).not.toHaveLength(0);
 })
 
-const times2 = ["18:00", "19:00", "20:00", "21:00", "22:00"];
+const todayTimes = initializeTimes(new Date());
+const firstTime = todayTimes[0];
+const todayTimes2 = todayTimes.slice(1);
 
 test('updateTimes remove', () => {
-  expect(updateTimes(defaultTimes, { type: "remove", payload: "17:00" })).toEqual(times2);
+  expect(updateTimes(todayTimes, { type: "remove", payload: firstTime })).toEqual(todayTimes2);
 })
 
 test('updateTimes reset', () => {
-  expect(updateTimes(times2, { type: "reset", payload: "17:00" })).toEqual(defaultTimes);
+  expect(updateTimes(todayTimes, { type: "reset", payload: firstTime })).not.toHaveLength(0);
 })
