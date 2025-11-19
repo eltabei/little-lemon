@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import Reservations from "./Reservations";
-import BookingForm from './BookingForm';
 import App from './App';
 
 const mockDispatch = jest.fn();

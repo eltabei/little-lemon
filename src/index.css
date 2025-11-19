@@ -33,7 +33,7 @@ nav {
   gap: 20px;
 }
 
-.hero, .specials, .testimonials, .special, .chicago, .reservations {
+.hero, .specials, .testimonials, .special, .chicago, .reservations, .confirm {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@ nav {
   background-color: green;
 }
 
-.reservations, .reserveInputs {
+.reservations, .reserveInputs, .confirm {
   display: flex;
   flex-direction: column;
   gap: 30px;
