@@ -35,28 +35,28 @@ function Main() {
       rating: "5",
       image: "",
       name: "Customer 1",
-      review: "Review next there is a lot of text here now man"
+      review: "Next"
     },
 
     {
       rating: "4",
       image: "",
       name: "Customer 2",
-      review: "Review next"
+      review: "Next"
     },
 
     {
       rating: "5",
       image: "",
       name: "Customer 3",
-      review: "Review next"
+      review: "Next"
     },
 
     {
       rating: "3",
       image: "",
       name: "Customer 4",
-      review: "Review next"
+      review: "Next"
     },
   ]
 
@@ -69,7 +69,7 @@ function Main() {
             <h2>Chicago</h2>
             <p>Welcome to Little Lemon Website.</p>
             <p>We are a family owned Mditerranean restaurant, focused on traditional recipes served with a modern twist.</p>
-            <button onClick={() => navigate("/booking")}>Reserve a Table</button>
+            <button className="reserveBtn" onClick={() => navigate("/booking")}>Reserve a Table</button>
           </section>
 
           <section className="heroRight">
@@ -80,13 +80,13 @@ function Main() {
         <section className="specials">
           <section className="specialsTop">
             <h2>Specials</h2>
-            <button onClick={() => navigate("/menu")}>Online Menu</button>
+            <button className="onlineMenuBtn" onClick={() => navigate("/menu")}>Online Menu</button>
           </section>
           <section className="dishContainer">
             {dishes.map(dish => (
               <section className="dish">
                 <img className="dishImg" src={dish.image} alt={"Image of " + dish.name} />
-                <p>{dish.name}</p>
+                <p className="dishName">{dish.name}</p>
                 <p>{dish.price}</p>
                 <p>{dish.info}</p>
                 <button onClick={() => navigate("/order-online")}>Order a delivery</button>

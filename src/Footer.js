@@ -12,12 +12,12 @@ function Footer() {
         </section>
         <section className="contactContainer">
           <h3>Contact</h3>
-          <h4>Address</h4>
-          <h4>Phone Number</h4>
-          <h4>Email</h4>
+          <p>Address</p>
+          <p>Phone Number</p>
+          <p>Email</p>
         </section>
         <section className="socialMediaContainer">
-          <h3>Social Media Links</h3>
+          <h3>Social Media</h3>
           <a href="https://facebook.com/example">Facebook</a>
           <a href="https://x.com/example">X</a>
           <a href="https://instagram.com/example">Instagram</a>
