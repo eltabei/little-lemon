@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-function BookingConfirmation() {
+function ConfirmedBooking() {
   const location = useLocation();
   const { reservationDate, reservationTime, noOfGuests, occasion } = location.state || {};
 
@@ -17,4 +17,4 @@ function BookingConfirmation() {
   );
 }
 
-export default BookingConfirmation;
+export default ConfirmedBooking;

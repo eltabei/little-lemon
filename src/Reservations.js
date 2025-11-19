@@ -2,7 +2,7 @@ import restaurant from "./restaurant.jpg";
 import chef from "./restaurant chef B.jpg";
 import BookingForm from "./BookingForm";
 
-function Reservations({ availableTimes, dispatch }) {
+function Reservations({ availableTimes, dispatch, submitForm }) {
   // const location = useLocation();
   // const { availableTimes, dispatch } = location.state || {};
 
@@ -16,7 +16,7 @@ function Reservations({ availableTimes, dispatch }) {
         <img src={chef} width="20%" alt="Restaurant Chef"></img>
       </section>
 
-      <BookingForm availableTimes={availableTimes} dispatch={dispatch} />
+      <BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />
     </section>
   );
 }

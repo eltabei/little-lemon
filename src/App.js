@@ -5,9 +5,8 @@ import Main from './Main.js';
 import Footer from './Footer.js';
 import { Routes, Route } from 'react-router-dom';
 import Reservations from './Reservations.js';
-import BookingConfirmation from './BookingConfirmation.js';
+import ConfirmedBooking from './ConfirmedBooking.js';
 import { fetchAPI, submitAPI } from './api.js';
-
 
 export function initializeTimes() {
   // return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
@@ -26,6 +25,10 @@ export function updateTimes(state, action, date) {
   }
 }
 
+function submitForm(formData) {
+  return submitAPI(formData);
+}
+
 function App() {
   // const [availableTimes, setAvailableTimes] = useState(initializeTimes());
   const initialState = initializeTimes();
@@ -39,10 +42,10 @@ function App() {
         <Route path="/home" element={<Main /> } />
         <Route path="/about" />
         <Route path="/menu" />
-        <Route path="/reservations" element={<Reservations availableTimes={availableTimes} dispatch={dispatch} />} />
+        <Route path="/reservations" element={<Reservations availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
         <Route path="/order-online" />
         <Route path="/login" />
-        <Route path="/confirm" element={<BookingConfirmation />} />
+        <Route path="/confirm" element={<ConfirmedBooking />} />
       </Routes>
       <Footer />
     </>

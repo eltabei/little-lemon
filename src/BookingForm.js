@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function BookingForm({ availableTimes, dispatch }) {
+function BookingForm({ availableTimes, dispatch, submitForm }) {
   const today = new Date().toISOString().split('T')[0];
   const [reservationDate, setReservationDate] = useState(today);
   const [reservationTime, setReservationTime] = useState(availableTimes[0]);
@@ -11,8 +11,11 @@ function BookingForm({ availableTimes, dispatch }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch({type: "remove", payload: reservationTime });
-    navigate("/confirm", { state: { reservationDate, reservationTime, noOfGuests, occasion } });
+    dispatch({type: "remove", payload: reservationTime, date: reservationDate });
+    const formData = { reservationDate, reservationTime, noOfGuests, occasion };
+    if (submitForm(formData)) {
+      navigate("/confirm", { state: formData });
+    }
   }
 
   return (
