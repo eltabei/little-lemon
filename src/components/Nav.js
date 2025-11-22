@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Booking from "./Booking";
+import Booking from "../pages/Booking";
 
 function Nav({ className }) {
   return (

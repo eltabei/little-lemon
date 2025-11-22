@@ -1,14 +1,14 @@
 import './App.css';
 import { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Header from './Header.js';
+import Header from './components/Header.js';
 import Main from './Main.js';
-import Footer from './Footer.js';
-import Booking from './Booking.js';
-import ConfirmedBooking from './ConfirmedBooking.js';
-import { fetchAPI, submitAPI } from './api.js';
-import UnderConstruction from './UnderConstruction.js';
-import NA from './NA.js';
+import Footer from './components/Footer.js';
+import Booking from './pages/Booking.js';
+import ConfirmedBooking from './pages/ConfirmedBooking.js';
+import { fetchAPI, submitAPI } from './utils/api.js';
+import UnderConstruction from './pages/UnderConstruction.js';
+import NA from './pages/NA.js';
 
 export function initializeTimes() {
   // return ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];

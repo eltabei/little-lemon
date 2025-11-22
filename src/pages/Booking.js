@@ -1,5 +1,5 @@
-import restaurant from "./restaurant.jpg";
-import chef from "./restaurant chef B.jpg";
+import restaurant from "../assets/restaurant.jpg";
+import chef from "../assets/restaurant chef B.jpg";
 import BookingForm from "./BookingForm";
 
 function Booking({ availableTimes, dispatch, submitForm }) {

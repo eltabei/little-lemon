@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import RestFood from './restaurantfood.jpg';
-import GreekSalad from './greek salad.jpg';
-import Bruchetta from './bruchetta.svg';
-import LemonDessert from './lemon dessert.jpg';
+import RestFood from './assets/restaurantfood.jpg';
+import GreekSalad from './assets/greek salad.jpg';
+import Bruchetta from './assets/bruchetta.svg';
+import LemonDessert from './assets/lemon dessert.jpg';
 
 function Main() {
   const navigate = useNavigate();

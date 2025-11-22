@@ -1,8 +1,8 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import Booking from "./Booking";
-import ConfirmedBooking from "./ConfirmedBooking";
-import { submitAPI } from './api.js';
+import ConfirmedBooking from "./ConfirmedBooking.js";
+import { submitAPI } from '../utils/api.js';
 
 const mockTimes = ["17:00", "18:00", "19:00"];
 const mockDispatch = jest.fn();
