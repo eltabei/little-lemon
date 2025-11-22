@@ -3,6 +3,10 @@ import RestFood from '../assets/restaurantfood.jpg';
 import GreekSalad from '../assets/greek salad.jpg';
 import Bruchetta from '../assets/bruchetta.png';
 import LemonDessert from '../assets/lemon dessert.jpg';
+import Customer1 from '../assets/customer1.jpg'
+import Customer2 from '../assets/customer2.jpg'
+import Customer3 from '../assets/customer3.jpg'
+import Customer4 from '../assets/customer4.jpg'
 
 function Main() {
   const navigate = useNavigate();
@@ -33,30 +37,30 @@ function Main() {
   const testimonials = [
     {
       rating: "5",
-      image: "",
-      name: "Customer 1",
-      review: "Next"
+      image: Customer1,
+      name: "Jenna",
+      review: "Amazing food"
     },
 
     {
       rating: "4",
-      image: "",
-      name: "Customer 2",
-      review: "Next"
+      image: Customer2,
+      name: "Mike",
+      review: "Pretty good restaurant"
     },
 
     {
       rating: "5",
-      image: "",
-      name: "Customer 3",
-      review: "Next"
+      image: Customer3,
+      name: "Nadia",
+      review: "Awesome food"
     },
 
     {
       rating: "3",
-      image: "",
-      name: "Customer 4",
-      review: "Next"
+      image: Customer4,
+      name: "Chen",
+      review: "Good restaurant"
     },
   ]
 
@@ -100,6 +104,7 @@ function Main() {
           <section className="testimonialsContainer">
             {testimonials.map(t => (
               <section className="testimony">
+                <img src={t.image} width="70%" />
                 <p>Name: {t.name}</p>
                 <span className="rating" aria-label={`${t.rating} stars`}>
                   Rating: {'⭐'.repeat(t.rating)}
