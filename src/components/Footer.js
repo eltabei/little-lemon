@@ -1,11 +1,14 @@
 import Logo from '../assets/Logo.svg';
 import Nav from './Nav';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <>
       <footer>
-        <img className="Logo" src={Logo} alt="Little Lemon Logo" />
+        <Link to="/">
+          <img src={Logo} className="Logo" alt="Little Lemon Logo" />
+        </Link>
         <section className="footerNavContainer">
           <h3>Navigation</h3>
           <Nav className="footerNav" />
