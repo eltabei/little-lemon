@@ -2,7 +2,7 @@ import './App.css';
 import { useReducer } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header.js';
-import Main from './Main.js';
+import Main from './pages/Main.js';
 import Footer from './components/Footer.js';
 import Booking from './pages/Booking.js';
 import ConfirmedBooking from './pages/ConfirmedBooking.js';
