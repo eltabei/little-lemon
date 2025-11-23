@@ -31,28 +31,33 @@ header, footer {
   }
 }
 
-@media (max-width: 767px) {
-  .headerNav {
-    display: none;
-  }
-
+@media (max-width: 1199px) {
   #menu-toggle:checked ~ .headerNav {
     /* make nav links horizontal */
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom:30px;
   }
 
-  .hero, .specialsTop, .chicago, .booking, .confirmedBooking, .dishContainer, .testimonialsContainer {
-    flex-direction: column;
+  .HamburgerBtn {
+    display: block;
+    margin: 30px;
+  }
+
+  .headerNav {
+    display: none;
   }
 
   header, footer {
     flex-direction: column;
   }
+}
 
-  .HamburgerBtn {
-    display: block;
+@media (max-width: 767px) {
+
+  .hero, .specialsTop, .chicago, .booking, .confirmedBooking, .dishContainer, .testimonialsContainer {
+    flex-direction: column;
   }
 }
 
