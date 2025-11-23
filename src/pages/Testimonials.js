@@ -41,10 +41,10 @@ function Testimonials() {
         <section className="testimonialsContainer">
           {testimonials.map(t => (
             <section className="testimony">
-              <img src={t.image} width="70%" />
+              <img src={t.image} className="customerImg" alt={`Customer: ${t.name}`} />
               <p>Name: {t.name}</p>
               <span className="rating" aria-label={`${t.rating} stars`}>
-                Rating: {'⭐'.repeat(t.rating)}
+                Rating: {"⭐".repeat(t.rating)}
               </span>
               <p>Review: {t.review}</p>
             </section>

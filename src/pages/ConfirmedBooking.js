@@ -6,13 +6,13 @@ function ConfirmedBooking() {
 
   return (
     <>
-      <section className="confirmedBooking">
+      <div className="confirmedBooking">
         <h2>Booking Confirmed</h2>
         <p>Date: {reservationDate}</p>
         <p>Time: {reservationTime}</p>
         <p>No. of Guests: {noOfGuests}</p>
         {occasion ? <p>Occasion: {occasion}</p> : ""}
-      </section>
+      </div>
     </>
   );
 }

@@ -8,11 +8,11 @@ function Header() {
     <>
       <header>
         <Link to="/">
-          <img src={Logo} className="Logo" alt="Little Lemon Logo" />
+          <img src={Logo} className="headerLogo" alt="Little Lemon Logo" />
         </Link>
-        <input type="checkbox" id="menu-toggle" class="hamburgerCB" />
-        <label for="menu-toggle" class="hamburgerLabel">
-          <img className="HamburgerBtn" src={HamburgerBtn} />
+        <input type="checkbox" className="hamburgerCB" />
+        <label for="menu-toggle" className="hamburgerLabel">
+          <img className="HamburgerBtn" src={HamburgerBtn} alt="Header menu" />
         </label>
         <Nav className="headerNav" />
       </header>

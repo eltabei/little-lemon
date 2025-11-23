@@ -1,10 +1,10 @@
 function UnderConstruction({ pageTitle }) {
   return (
     <>
-      <section className="underConstruction">
+      <div className="underConstruction">
         <h1>{pageTitle}</h1>
         <h2>Page Under Construction</h2>
-      </section>
+      </div>
     </>
   );
 }

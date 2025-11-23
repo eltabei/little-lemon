@@ -15,7 +15,11 @@ header, footer {
   gap: 30px;
 }
 
-#menu-toggle {
+footer {
+  align-items: flex-start;
+}
+
+.hamburgerCB {
   display: none;
 }
 
@@ -32,7 +36,7 @@ header, footer {
 }
 
 @media (max-width: 1199px) {
-  #menu-toggle:checked ~ .headerNav {
+  .hamburgerCB:checked ~ .headerNav {
     /* make nav links horizontal */
     display: flex;
     flex-direction: column;
@@ -55,7 +59,6 @@ header, footer {
 }
 
 @media (max-width: 767px) {
-
   .hero, .specialsTop, .chicago, .booking, .confirmedBooking, .dishContainer, .testimonialsContainer {
     flex-direction: column;
   }
@@ -101,16 +104,24 @@ Footer h3 {
 
 .reserveBtn, .onlineMenuBtn, .submitBtn {
   background-color: #F4CE14;
-  color: black;
+  color: #495E57;
+  font-weight: bold;
+  border: solid #F4CE14;
   /* border-radius: 12px; */
-  border-radius: 9px;
+  border-radius: 2rem;
   border-style: solid;
   height: 30px;
 }
 
-.submitBtn:disabled {
-  background-color: grey;
-  /* color: black; */
+.reserveBtn:hover, .submitBtn:hover {
+  background-color: #495E57;
+  color: #FFFFFF;
+}
+
+.onlineMenuBtn:hover {
+  background-color: #495E57;
+  border-color: #495E57;
+  color: #FFFFFF;
 }
 
 .reserveBtn {
@@ -190,12 +201,53 @@ Footer h3 {
   gap: 20px;
 }
 
-.footerNav, .socialMediaContainer {
+.footerNav  {
   display: flex;
   flex-direction: column;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialMediaLinks {
+  display: flex;
+  justify-content: space-between;
 }
 
 button, .submitBtn {
   font-size: 14pt;
   font-weight: bold;
+}
+
+.submitBtn:disabled {
+  background-color: black;
+  border-color: black;
+  color: grey;
+  /* color: black; */
+}
+
+.customerImg {
+  width: 70%;
+  border-radius: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #495E57;
+  font-weight: bold;
+}
+
+.headerLogo {
+  width: 150%;
+}
+
+.footerLogo {
+  width: 200%;
+}
+
+.footerLogoContainer {
+  align-self: center;
+  /* justify-self: center; */
 }

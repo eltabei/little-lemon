@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import GreekSalad from '../assets/greek salad.jpg';
 import Bruchetta from '../assets/bruchetta.png';
 import LemonDessert from '../assets/lemon dessert.jpg';
@@ -39,11 +40,11 @@ function Dishes() {
         <div className="dishContainer">
           {dishes.map(dish => (
             <div className="dish">
-              <img className="dishImg" src={dish.image} alt={"Image of " + dish.name} />
+              <img className="dishImg" src={dish.image} alt={`Dish: ${dish.name}`} />
               <p className="dishName">{dish.name}</p>
               <p>{dish.price}</p>
               <p>{dish.info}</p>
-              <button onClick={() => navigate("/order-online")}>Order a delivery</button>
+              <Link to="/order-online">Order a delivery 🛒</Link>
             </div>
           ))}
         </div>

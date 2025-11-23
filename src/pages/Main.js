@@ -1,5 +1,5 @@
 import Hero from './Hero.js';
-import Dishes from './Dishes.js';
+import Specials from './Specials.js';
 import Testimonials from './Testimonials.js';
 import Chicago from './Chicago.js';
 
@@ -9,8 +9,8 @@ function Main() {
     <>
       <main>
         <Hero />
+        <Specials />
         <Testimonials />
-        <Dishes />
         <Chicago />
       </main>
     </>
