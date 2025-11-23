@@ -3,10 +3,10 @@ import RestFood from '../assets/restaurantfood.jpg';
 import GreekSalad from '../assets/greek salad.jpg';
 import Bruchetta from '../assets/bruchetta.png';
 import LemonDessert from '../assets/lemon dessert.jpg';
-import Customer1 from '../assets/customer1.jpg'
-import Customer2 from '../assets/customer2.jpg'
-import Customer3 from '../assets/customer3.jpg'
-import Customer4 from '../assets/customer4.jpg'
+import Customer1 from '../assets/customer1.jpg';
+import Customer2 from '../assets/customer2.jpg';
+import Customer3 from '../assets/customer3.jpg';
+import Customer4 from '../assets/customer4.jpg';
 
 function Main() {
   const navigate = useNavigate();
