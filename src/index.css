@@ -19,11 +19,7 @@ footer {
   align-items: flex-start;
 }
 
-.hamburgerCB {
-  display: none;
-}
-
-.HamburgerBtn {
+#hamburgerCB, .HamburgerBtn {
   display: none;
 }
 
@@ -36,7 +32,7 @@ footer {
 }
 
 @media (max-width: 1199px) {
-  .hamburgerCB:checked ~ .headerNav {
+  #hamburgerCB:checked ~ .headerNav {
     /* make nav links horizontal */
     display: flex;
     flex-direction: column;
@@ -98,7 +94,7 @@ h3 {
   font-size: 18pt;
 }
 
-Footer h3 {
+footer h3 {
   color: black;
 }
 

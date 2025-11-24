@@ -10,8 +10,8 @@ function Header() {
         <Link to="/">
           <img src={Logo} className="headerLogo" alt="Little Lemon Logo" />
         </Link>
-        <input type="checkbox" className="hamburgerCB" />
-        <label for="menu-toggle" className="hamburgerLabel">
+        <input type="checkbox" id="hamburgerCB" />
+        <label for="hamburgerCB" className="hamburgerLabel">
           <img className="HamburgerBtn" src={HamburgerBtn} alt="Header menu" />
         </label>
         <Nav className="headerNav" />
